@@ -45,19 +45,44 @@ const questions = [{
 const fs = require("fs");
 const inquirer = require("inquirer");
 const util = require("util");
+const { resolve } = require("path");
 
-//const writeToFile = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // function to write README file
 function writeToFile(fileName, data) {
+    return new Promise(function(resolve, reject) {
+        fs.writeFile(fileName, data, function(err, data){
+            if(err){
+                return reject(err);
+            }
+            resolve(data);
+        });
+    });
 }
 
+function buildReadmeText(userInput){
+
+
+}
 // function to initialize program
 function init() {
 
     inquirer
     .prompt(questions)
-    .then(err => console.log("In then clause    "))
+    .then(answers => {
+        console.log("In then clause    ");
+
+        let readmeText = JSON.stringify(answers);
+
+        writeFileAsync("README.md", readmeText)
+        .then(function() {
+            console.log("Success!");
+        });
+    })
+    .catch(err => {
+
+    });
 
 }
 
