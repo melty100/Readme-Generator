@@ -1,7 +1,8 @@
+
 // array of questions for user
 const questions = [{
     type: "input",
-    message: "Enter title of Read Me.",
+    message: "Enter title of Readme",
     name: "title"
 },
 {
@@ -28,7 +29,7 @@ const questions = [{
     type: "list",
     message: "Enter license",
     name: "license",
-    choices: ['BSD', 'MIT', 'GPL'];
+    choices: ['BSD', 'MIT', 'GPL']
 },
 {
     type: "input",
@@ -39,9 +40,13 @@ const questions = [{
     type: "input",
     message: "Enter email address",
     name: "email"
-}
+}];
 
-];
+const fs = require("fs");
+const inquirer = require("inquirer");
+const util = require("util");
+
+//const writeToFile = util.promisify(fs.writeFile);
 
 // function to write README file
 function writeToFile(fileName, data) {
@@ -49,6 +54,10 @@ function writeToFile(fileName, data) {
 
 // function to initialize program
 function init() {
+
+    inquirer
+    .prompt(questions)
+    .then(err => console.log("In then clause    "))
 
 }
 
