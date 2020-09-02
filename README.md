@@ -1,24 +1,25 @@
-# a
+# README Generator
+![badge](https://img.shields.io/badge/license-MIT-green)
 ## Description
-a
+This application is a command line tool that writes a readme file for the user
 ## Table of Contents
-* Description
-* Table of Contents
-* Installation
+<!--ts-->
+* [Installation](#Installation)
 * Usage
 * License
 * Contributing
 * Tests
 * Questions
+<!--te-->
 ## Installation
-a
+Install node js and npm install inquirer
 ## Usage
-a
+Navigate to the directory the application is installed in. Enter node index.js into the terminal and respond to the questions.
 ## License
-![badge](https://img.shields.io/badge/license-BSD-green)
+![badge](https://img.shields.io/badge/license-MIT-green)
 ## Contributing
 undefined
 ## Tests
-a
+n/a
 ## Questions
-Any questions? Contact me at a or follow me on [GitHub](https://github.com/a)
+Any questions? Contact me at melty@gmail.com or follow me on [GitHub](https://github.com/melty100)

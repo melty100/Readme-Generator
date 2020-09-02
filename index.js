@@ -73,14 +73,14 @@ function buildReadmeText(userInput){
 ## Description
 ${userInput.description}
 ## Table of Contents
-* Description
-* Table of Contents
-* Installation
+<!--ts-->
+* [Installation](#Installation)
 * Usage
 * License
 * Contributing
 * Tests
 * Questions
+<!--te-->
 ## Installation
 ${userInput.instructions}
 ## Usage
@@ -93,16 +93,14 @@ ${userInput.guidlines}
 ${userInput.testInfo}
 ## Questions
 Any questions? Contact me at ${userInput.email} or follow me on [GitHub](https://github.com/${userInput.github})`;
-
 };
+
 // function to initialize program
 function init() {
 
     inquirer
     .prompt(questions)
     .then(answers => {
-        //console.log(answers);
-        console.log(buildReadmeText(answers));
 
         writeFileAsync("README.md", buildReadmeText(answers))
         .then(function() {
