@@ -7,6 +7,11 @@ const questions = [{
 },
 {
     type: "input",
+    message: "Enter a description for application",
+    name: "description"
+},
+{
+    type: "input",
     message: "Enter installation instructions",
     name: "instructions"
 },
@@ -63,19 +68,42 @@ function writeToFile(fileName, data) {
 
 function buildReadmeText(userInput){
 
+    return `# ${userInput.title}
+## Description
+${userInput.description}
+## Table of Contents
+* Description
+* Table of Contents
+* Installation
+* Usage
+* License
+* Contributing
+* Tests
+* Questions
+## Installation
+${userInput.instructions}
+## Usage
+${userInput.usage}
+## License
+${userInput.license}
+## Contributing
+${userInput.guidlines}
+## Tests
+${userInput.testInfo}
+## Questions
+Any questions? Contact me at ${userInput.email} or follow me on [GitHub](https://github.com/${userInput.github})`;
 
-}
+};
 // function to initialize program
 function init() {
 
     inquirer
     .prompt(questions)
     .then(answers => {
-        console.log("In then clause    ");
+        //console.log(answers);
+        console.log(buildReadmeText(answers));
 
-        let readmeText = JSON.stringify(answers);
-
-        writeFileAsync("README.md", readmeText)
+        writeFileAsync("README.md", buildReadmeText(answers))
         .then(function() {
             console.log("Success!");
         });
