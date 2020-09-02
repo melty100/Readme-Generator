@@ -84,10 +84,8 @@ ${userInput.description}
 ${userInput.instructions}
 ## Usage
 ${userInput.usage}
-## License
-![badge](https://img.shields.io/badge/license-${userInput.license}-green)
 ## Contributing
-${userInput.guidlines}
+${userInput.guidelines}
 ## Tests
 ${userInput.testInfo}
 ## Questions
