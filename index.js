@@ -75,11 +75,10 @@ ${userInput.description}
 ## Table of Contents
 <!--ts-->
 * [Installation](#Installation)
-* Usage
-* License
-* Contributing
-* Tests
-* Questions
+* [Usage](#Usage)
+* [Contributing](#Contributing)
+* [Tests](#Contributing)
+* [Questions](#Questions)
 <!--te-->
 ## Installation
 ${userInput.instructions}
