@@ -69,6 +69,7 @@ function writeToFile(fileName, data) {
 function buildReadmeText(userInput){
 
     return `# ${userInput.title}
+![badge](https://img.shields.io/badge/license-${userInput.license}-green)
 ## Description
 ${userInput.description}
 ## Table of Contents
@@ -85,7 +86,7 @@ ${userInput.instructions}
 ## Usage
 ${userInput.usage}
 ## License
-${userInput.license}
+![badge](https://img.shields.io/badge/license-${userInput.license}-green)
 ## Contributing
 ${userInput.guidlines}
 ## Tests

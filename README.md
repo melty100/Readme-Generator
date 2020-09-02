@@ -15,10 +15,10 @@ a
 ## Usage
 a
 ## License
-BSD
+![badge](https://img.shields.io/badge/license-BSD-green)
 ## Contributing
 undefined
 ## Tests
 a
 ## Questions
-Any questions? Contact me at a or follow me on [GitHub](https://github.com/melty100)
+Any questions? Contact me at a or follow me on [GitHub](https://github.com/a)
